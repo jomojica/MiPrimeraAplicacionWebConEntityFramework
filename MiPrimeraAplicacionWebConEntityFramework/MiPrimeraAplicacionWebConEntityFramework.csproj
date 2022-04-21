@@ -100,23 +100,99 @@
     <Content Include="Models\BDPasaje.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>BDPasaje.Context.cs</LastGenOutput>
+      <DependentUpon>BDPasaje.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\BDPasaje.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPasaje.edmx</DependentUpon>
+      <LastGenOutput>BDPasaje.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Asiento.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BDPasaje.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDPasaje.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\BDPasaje.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\BDPasaje.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDPasaje.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bus.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DETALLEVENTA.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Empleado.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lugar.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Marca.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarcaCLS.cs" />
+    <Compile Include="Models\Modelo.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pagina.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rol.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RolPagina.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sexo.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sucursal.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoBus.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoContrato.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoUsuario.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPOUSUARIOREGISTRO.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VENTA.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Viaje.cs">
+      <DependentUpon>BDPasaje.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -126,9 +202,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BDPasaje.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\BDPasaje.edmx.diagram">
+    <Content Include="Models\BDPasaje.edmx.diagram">
       <DependentUpon>BDPasaje.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -139,7 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Marca\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
