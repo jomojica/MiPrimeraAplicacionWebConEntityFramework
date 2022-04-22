@@ -8,6 +8,10 @@ namespace MiPrimeraAplicacionWebConEntityFramework.Models
 {
     public class MarcaCLS
     {
+        internal int iidmarca;
+        internal string nombre;
+        internal string descripcion;
+
         [Display(Name ="ID Marca")]
         public int IIDMARCA { get; set; }
         [Display(Name = "Nombre")]
