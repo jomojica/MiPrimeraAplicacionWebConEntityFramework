@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MiPrimeraAplicacionWebConEntityFramework.Models;
 
 namespace MiPrimeraAplicacionWebConEntityFramework.Controllers
 {
@@ -11,7 +12,18 @@ namespace MiPrimeraAplicacionWebConEntityFramework.Controllers
         // GET: Marca
         public ActionResult Index()
         {
-            return View();
+            List<MarcaCLS> listaMarca = null;
+            using(var bd= new BDPasajeEntities())
+            {
+               listaMarca = (from marca in bd.Marca
+                                 select new MarcaCLS
+                                    {
+                                    iidmarca = marca.IIDMARCA,
+                                    nombre = marca.NOMBRE,
+                                    descripcion  = marca.DESCRIPCION
+                                    }).ToList();
+            }
+            return View(listaMarca);
         }
     }
 }
