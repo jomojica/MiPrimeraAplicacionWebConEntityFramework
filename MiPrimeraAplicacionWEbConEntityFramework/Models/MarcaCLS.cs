@@ -7,15 +7,13 @@ using System.Web;
 namespace MiPrimeraAplicacionWEbConEntityFramework.Models
 {
     public class MarcaCLS
-    {/*Este es el modelo marca que solo describe las colummnas de la tabla marca de la base de datos
-      usando data notation*/
-
+    {/*Este es el modelo marca que solo describe las colummnas de la tabla marca de la base de datos*/
         [Display(Name ="Id Marca")]
         public int iidmarca { get; set; }
         [Display(Name = "Nombre")]
-        public string nombre { get; set; }
+        public int nombre { get; set; }
         [Display(Name = "Descripción")]
-        public string descripcion{ get; set; }
+        public int descripcion{ get; set; }
         //[Display(Name = "B-Habilitado")]
         public int bhabilitado { get; set; }
     }
