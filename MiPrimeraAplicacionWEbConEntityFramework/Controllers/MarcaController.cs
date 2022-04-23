@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using MiPrimeraAplicacionWEbConEntityFramework.Models;
 
 namespace MiPrimeraAplicacionWEbConEntityFramework.Controllers
-{/*Este es el controlador para MArca*/
+{/*Este es el controlador para MArca */
     public class MarcaController : Controller
     {
         // GET: Marca
