@@ -7,7 +7,7 @@ using System.Web;
 namespace MiPrimeraAplicacionWEbConEntityFramework.Models
 {
     public class MarcaCLS
-    {
+    {/*Este es el modelo marca que solo describe las colummnas de la tabla marca de la base de datos*/
         [Display(Name ="Id Marca")]
         public int iidmarca { get; set; }
         [Display(Name = "Nombre")]
