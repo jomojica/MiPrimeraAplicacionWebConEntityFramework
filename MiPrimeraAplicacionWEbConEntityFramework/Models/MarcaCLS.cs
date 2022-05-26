@@ -1,4 +1,5 @@
-﻿using System;
+﻿/* Este es el modelo de Marca Table*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace MiPrimeraAplicacionWEbConEntityFramework.Models
         [Display(Name ="Id Marca")]
         public int iidmarca { get; set; }
         [Display(Name = "Nombre")]
-        public int nombre { get; set; }
+        public string nombre { get; set; }
         [Display(Name = "Descripción")]
-        public int descripcion{ get; set; }
+        public string descripcion{ get; set; }
         //[Display(Name = "B-Habilitado")]
         public int bhabilitado { get; set; }
     }

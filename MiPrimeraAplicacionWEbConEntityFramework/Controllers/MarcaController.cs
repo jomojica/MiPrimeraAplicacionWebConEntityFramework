@@ -1,4 +1,5 @@
-﻿using System;
+﻿/* Creacion de los controles de MARCA*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,12 +13,18 @@ namespace MiPrimeraAplicacionWEbConEntityFramework.Controllers
         // GET: Marca
         public ActionResult Index()
         {
+            List<MarcaCLS> listaMarca = null;
             using (var bd = new BDPasajeEntities())
             {
-
+                listaMarca = (from marca in bd.Marca
+                              select new MarcaCLS
+                              {
+                                  iidmarca = marca.IIDMARCA,
+                                  nombre = marca.NOMBRE,
+                                  descripcion = marca.DESCRIPCION
+                              }).ToList();
             }
-
-                return View();
+            return View(listaMarca);
         }
     }
 }
