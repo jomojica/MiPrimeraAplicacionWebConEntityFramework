@@ -14,7 +14,7 @@ namespace MiPrimeraAplicacionWEbConEntityFramework.Controllers
         public ActionResult Index()
         {
             List<MarcaCLS> listaMarca = null;
-            using (var bd = new BDPasajeEntities())
+            using (var bd = new BDPasajeEntities1())
             {
                 listaMarca = (from marca in bd.Marca
                               select new MarcaCLS

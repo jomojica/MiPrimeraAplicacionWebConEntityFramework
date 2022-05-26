@@ -13,10 +13,10 @@ namespace MiPrimeraAplicacionWEbConEntityFramework.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BDPasajeEntities : DbContext
+    public partial class BDPasajeEntities1 : DbContext
     {
-        public BDPasajeEntities()
-            : base("name=BDPasajeEntities")
+        public BDPasajeEntities1()
+            : base("name=BDPasajeEntities1")
         {
         }
     

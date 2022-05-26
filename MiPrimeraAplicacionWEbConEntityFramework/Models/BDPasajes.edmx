@@ -1147,7 +1147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BDPasajeEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BDPasajeEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Asiento" EntityType="Self.Asiento" />
           <EntitySet Name="Bus" EntityType="Self.Bus" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" />
@@ -1263,7 +1263,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BDPasajeModelStoreContainer" CdmEntityContainer="BDPasajeEntities">
+        <EntityContainerMapping StorageEntityContainer="BDPasajeModelStoreContainer" CdmEntityContainer="BDPasajeEntities1">
           <EntitySetMapping Name="Asiento">
             <EntityTypeMapping TypeName="BDPasajeModel.Asiento">
               <MappingFragment StoreEntitySet="Asiento">

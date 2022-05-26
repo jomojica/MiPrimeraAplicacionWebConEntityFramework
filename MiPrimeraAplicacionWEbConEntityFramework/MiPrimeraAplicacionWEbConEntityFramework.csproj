@@ -99,8 +99,8 @@
     <Content Include="Global.asax" />
     <Content Include="Models\BDPasajes.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BDPasajes.Context.cs</LastGenOutput>
       <DependentUpon>BDPasajes.edmx</DependentUpon>
+      <LastGenOutput>BDPasajes.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\BDPasajes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
